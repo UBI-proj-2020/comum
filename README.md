@@ -1,4 +1,1 @@
-# comum
-
-Repositorio para partilha de informação entre todos
-
+Explore a wiki para mais informação
