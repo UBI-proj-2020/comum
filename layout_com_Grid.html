@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body>* {
+            text-align: center;
+            vertical-align: middle;
+            font-size: 3vw;
+            padding: 1vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body>header {font-weight: bold; font-size: 6vw;}
+        ul li{ 
+                display: block;
+                padding: 0.4vw 0.7vw;
+                margin: 0.7vw; 
+                background-color: rgb(174, 174, 224);
+
+        }
+        a{text-decoration: none; color: black;}
+        header {grid-area: header; background-color: #2196F3;}
+        nav {grid-area: menu; background-color: rgb(105, 105, 168);}
+        main {grid-area: main; background-color: rgb(172, 202, 228);}
+        aside {grid-area: aside; background-color: rgb(134, 169, 204);}
+        footer {grid-area: footer; background-color: #2196F3;}
+        
+        @media (max-width: 600px) {
+            body {
+                display: grid;
+                width: 100vw;
+                height: 100vh;
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 9vw 7vw 1fr 7vw 7vw;
+                grid-template-areas:
+                    'header'
+                    'menu'
+                    'main'
+                    'aside'
+                    'footer';
+
+                grid-gap: 10px;
+                background-color: rgb(6, 4, 116);
+                padding: 10px;
+            }
+            ul li{display: inline-block;}
+        }
+        @media (min-width: 600px) {
+            body {
+                display: grid;
+                width: 100vw;
+                height: 100vh;
+
+                grid-template-rows: 9vw 1fr 7vw;
+                grid-template-columns: 1fr 3fr 1fr;
+
+                grid-template-areas:
+                    'header header header'
+                    'menu   main   aside'
+                    'footer footer footer';
+
+                grid-gap: 1vw;
+                background-color: rgb(6, 4, 116);
+                padding: 10px;
+            }
+        }        
+        </style>
+    </head>
+<body>
+    <header><p>TÍTULO</p></header>
+    <nav>
+        <ul>
+            <li><a href="home.html" target="conteudo">Introdução</a></li>
+            <li><a href="portfolio.html" target="conteudo">Portfolio</a></li>
+            <li><a href="cv.html" target="conteudo">Curriculum</a></li>
+            <li><a href="contactos.html" target="conteudo">Contactos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <p>Este website explora a combinação do <b>CSS Grid e Flexbox</b> na criação de um layout. <br> Na disposição dos elementos (header, nav, main, aside e footer) usa-se o <b>CSS Grid</b>, recorrendo à disposição de grid-areas numa grid-template-areas. <br> Por outro lado é usado o <b>CSS Flexbox</b> para o texto no centro de cada contentor.</p>    
+        </div>
+ <!--
+        <iframe src="home.html" frameborder="0" name="conteudo"></iframe>
+ -->       
+    </main>
+    <aside> <p>Layout CSS Grid</p></aside>
+    <footer><p>LSF &copy; 2020</p></footer>
+</body>
+</html>
